@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Captioning</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <body>
+      <section>
+        <section class="mainForm">
+          <div class="heading">
+            <h1>IMAGE CAPTIONING</h1>
+          </div>
+          <div class="firstBlock">
+            <div>
+              <form id="image-form" class="imageUploadSection">
+                <div class="inputImage">
+                  <h2>Upload an Image:</h2>
+                  <input
+                    type="file"
+                    id="image"
+                    accept="image/*"
+                    required
+                    onchange="displayImage()"
+                  />
+                </div>
+                <div class="uploaded-image">
+                  <img id="uploaded-image" src="uic.png" alt="Uploaded Image" />
+                </div>
+              </form>
+            </div>
+
+            <div>
+              <form id="caption-form">
+                <div>
+                  <h2>Image Description:</h2>
+                  <textarea type="text" id="description" required></textarea>
+                </div>
+                <div class="button">
+                  <button type="button" id="generate-caption">
+                    Generate Caption
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="secondBlock">
+            <div id="caption">
+              <p>Caption: <span id="caption-text"></span></p>
+              <button type="button" id="copy-caption">Copy Caption</button>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <script src="script.js"></script>
+    </body>
+  </body>
+</html>

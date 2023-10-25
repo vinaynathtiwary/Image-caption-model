@@ -1,0 +1,173 @@
+/* Reset default padding and margin for common elements */
+body,
+h1,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a base font size and full viewport size for better responsiveness */
+body {
+  font-size: 16px;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f2f2f2; /* Light gray background */
+}
+
+/* Style the main form container */
+.mainForm {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Style the heading */
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+/* Style the first content block */
+.firstBlock {
+  background-color: #3498db;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Style the second content block */
+.secondBlock {
+  background-color: #d35400;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Style the form elements and center them */
+form {
+  text-align: center;
+}
+
+/* Style the uploaded image */
+#uploaded-image {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Make the caption text readable */
+#caption-text {
+  font-weight: bold;
+}
+
+/* Style the caption form */
+#caption-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#caption-form textarea {
+  height: 200px;
+  width: 400px;
+  margin: 0px 0;
+  border-radius: 5px;
+}
+
+/* Style the image upload section */
+.imageUploadSection img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#caption p {
+  background-color: black;
+  margin: 10px;
+  width: 600px;
+  height: 150px;
+  border-radius: 10px;
+}
+#caption button {
+  margin-left: 220px;
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  font-weight: 500;
+  border-color: #d3540000;
+}
+
+.button button {
+  margin-left: 10px;
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  font-weight: 500;
+  border-color: #d3540000;
+}
+
+/* Additional responsive styles */
+@media (max-width: 600px) {
+  /* Adjust the font size for smaller screens */
+  body {
+    font-size: 14px;
+  }
+
+  /* Reduce the height of the caption-form textarea on smaller screens */
+  #caption-form textarea {
+    height: 100px;
+    width: 300px;
+  }
+
+  /* Adjust the image size and spacing for smaller screens */
+  .imageUploadSection img {
+    height: 50px;
+    width: 100px;
+    margin-left: 50px;
+    padding: 20px;
+  }
+
+  /* Stack form elements in the firstBlock for better mobile layout */
+  .firstBlock {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: 60vh;
+  }
+
+  /* Adjust the height of the firstBlock and secondBlock on smaller screens */
+  .firstBlock {
+    height: 50vh;
+  }
+
+  .secondBlock {
+    height: 40vh;
+  }
+
+  #caption p {
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+  }
+  #caption button {
+    margin-left: 65px;
+    font-size: 15px;
+    border-radius: 10px;
+    font-weight: 500;
+    border-color: #d3540000;
+  }
+
+  #caption button:hover {
+    box-shadow: #d35400;
+  }
+}
