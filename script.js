@@ -17,3 +17,16 @@ function displayImage() {
     uploadedImage.src = "";
   }
 }
+
+document
+  .getElementById("generate-caption")
+  .addEventListener("click", function () {
+    // Get the image description from the textarea
+    const description = document.getElementById("description").value;
+
+    // Here, you can send the description to your backend for caption generation
+    // For now, let's display a placeholder caption
+    const placeholderCaption =
+      "A beautiful image with a wonderful description!";
+    document.getElementById("caption-text").textContent = placeholderCaption;
+  });

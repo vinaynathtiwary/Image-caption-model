@@ -7,56 +7,49 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <body>
-      <section>
-        <section class="mainForm">
-          <div class="heading">
-            <h1>IMAGE CAPTIONING</h1>
+    <section class="mainForm">
+      <div class="heading">
+        <h1>IMAGE CAPTION GENERATOR</h1>
+      </div>
+      <div class="firstBlock">
+        <div class="image-upload">
+          <form id="image-form" class="imageUploadSection">
+            <h2>Upload an Image:</h2>
+            <label for="image" id="image-label"> </label>
+            <input
+              type="file"
+              id="image"
+              accept="image/*"
+              required
+              onchange="displayImage()"
+            />
+          </form>
+          <div class="uploaded-image">
+            <img id="uploaded-image" src="uic.png" alt="Uploaded Image" />
           </div>
-          <div class="firstBlock">
-            <div>
-              <form id="image-form" class="imageUploadSection">
-                <div class="inputImage">
-                  <h2>Upload an Image:</h2>
-                  <input
-                    type="file"
-                    id="image"
-                    accept="image/*"
-                    required
-                    onchange="displayImage()"
-                  />
-                </div>
-                <div class="uploaded-image">
-                  <img id="uploaded-image" src="uic.png" alt="Uploaded Image" />
-                </div>
-              </form>
-            </div>
+        </div>
 
-            <div>
-              <form id="caption-form">
-                <div>
-                  <h2>Image Description:</h2>
-                  <textarea type="text" id="description" required></textarea>
-                </div>
-                <div class="button">
-                  <button type="button" id="generate-caption">
-                    Generate Caption
-                  </button>
-                </div>
-              </form>
+        <div class="caption-section">
+          <form id="caption-form">
+            <h2>Image Description:</h2>
+            <textarea id="description" required></textarea>
+            <div class="button">
+              <button type="button" id="generate-caption">
+                Generate Caption
+              </button>
             </div>
-          </div>
+          </form>
+        </div>
+      </div>
 
-          <div class="secondBlock">
-            <div id="caption">
-              <p>Caption: <span id="caption-text"></span></p>
-              <button type="button" id="copy-caption">Copy Caption</button>
-            </div>
-          </div>
-        </section>
-      </section>
+      <div class="secondBlock">
+        <div id="caption">
+          <p>Caption: <span id="caption-text"></span></p>
+          <button type="button" id="copy-caption">Copy Caption</button>
+        </div>
+      </div>
+    </section>
 
-      <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
   </body>
 </html>
